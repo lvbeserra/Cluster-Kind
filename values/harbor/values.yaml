@@ -1,0 +1,10 @@
+expose:
+  type: ingress
+  tls:
+    enabled: false
+
+ingress:
+  hosts:
+    core: harbor.localhost.com
+
+externalURL: http://harbor.localhost.com

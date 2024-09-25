@@ -1,0 +1,47 @@
+repositories:
+  - name: nginx
+    url: https://kubernetes.github.io/ingress-nginx
+
+releases:
+  - name: ingress-nginx
+    namespace: ingress-nginx
+    createNamespace: true
+    chart: nginx/ingress-nginx
+    version: 4.4.2
+    values:
+      - values/nginx/values.yaml
+
+  - name: jenkins
+    namespace: jenkins
+    createNamespace: true
+    chart: jenkinsci/helm-charts
+    values:
+      - values/jenkins/values.yaml
+
+  - name: harbor
+    namespace: harbor
+    createNamespace: true
+    chart: goharbor/harbor-helm
+    values:
+      - values/harbor/values.yaml
+
+  - name: sonarqube
+    namespace: sonarqube
+    createNamespace: true
+    chart: SonarSource/helm-chart-sonarqube
+    values:
+      - values/sonarqube/values.yaml
+
+  - name: argocd
+    namespace: argocd
+    createNamespace: true
+    chart: argoproj/argo-cd
+    values:
+      - values/argocd/values.yaml
+
+  - name: imagepullsecret-patcher
+    namespace: kube-system
+    createNamespace: true
+    chart: your-repo/imagepullsecret-patcher
+    values:
+      - secretName: "harbor-credentials"

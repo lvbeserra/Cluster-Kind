@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Defina seu e-mail e token aqui
+EMAIL="lvbeserra0@gmail.com"
+TOKEN="seu_token_aqui"
+
+# Configurações do Git
+git config --global user.email "$EMAIL"
+git config --global user.name "Seu Nome"
+
+# Clonando o repositório usando o token
+git clone https://$TOKEN@github.com/MonycaS/git_test.git
+

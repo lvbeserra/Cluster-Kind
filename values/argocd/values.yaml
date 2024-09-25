@@ -1,0 +1,7 @@
+server:
+  insecure: true
+
+ingress:
+  enabled: true
+  hosts:
+    - argocd.localhost.com

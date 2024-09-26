@@ -83,7 +83,5 @@ for chart in harbor jenkins argo sonarqube; do
             ;;
     esac
 done
-
-# Outros comandos necessários para seu setup
 echo_info "Setup concluído!"
 
